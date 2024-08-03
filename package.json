@@ -1,0 +1,38 @@
+{
+    "name": "fliptakehometest_chapter2",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "run:e2e:all": "npx cypress run --spec 'cypress/e2e/features/**/*.feature'",
+        "cypress:run:custom": "npx cypress run --spec 'cypress/e2e/features/bookStoreApplication/web/login.feature' && npx cypress run --spec 'cypress/e2e/features/bookStoreApplication/web/logout.feature' && npx cypress run --spec 'cypress/e2e/features/bookStoreApplication/web/searchBook.feature' && npx cypress run --spec 'cypress/e2e/features/bookStoreApplication/api/authorizationAPI.feature' && npx cypress run --spec 'cypress/e2e/features/bookStoreApplication/api/booksAPI.feature'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@4tw/cypress-drag-drop": "^2.2.5",
+        "@badeball/cypress-cucumber-preprocessor": "^20.1.1",
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.2.2",
+        "@types/faker": "^6.6.9",
+        "cypress": "^13.13.2",
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "cypress-drag-drop": "^1.1.1",
+        "cypress-iframe": "^1.0.1"
+    },
+    "dependencies": {
+        "chai": "^4.5.0",
+        "chai-json-schema": "^1.5.1",
+        "cypress-real-events": "^1.12.0",
+        "date-fns": "^3.6.0",
+        "faker": "^5.5.3"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": false,
+        "stepDefinitions": [
+            "cypress/e2e/stepDefinitions/*.{cy.js,spec.js,js,ts}",
+            "cypress/e2e/stepDefinitions/*/*.{cy.js,spec.js,js,ts}",
+            "cypress/e2e/stepDefinitions/*/*/*.{cy.js,spec.js,js,ts}"
+        ]
+    }
+}
