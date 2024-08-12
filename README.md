@@ -1,4 +1,4 @@
-# MUHAMMAD HANAN RAFIF FARIZTA - FLIP TAKE HOME TEST CHAPTER 2
+# DemoQA Portfolio by Hanan Farizta
 
 ## **Prerequisites**
 
@@ -27,36 +27,4 @@ Run All Test
 
 ```
 npx cypress run --spec 'cypress/e2e/features/**/*.feature'
-```
-
-## **How to Uplod the Tests to TestRail using TR CLI**
-
-Run Test
-
-```
-npx cypress run --reporter "junit" --reporter-options "mochaFile=reports/junit-[hash].xml"
-```
-
-Instal TR CLI
-
-```
-pip install trcli
-```
-
-Instal JUnit Parser
-
-```
-pip install junitparser
-```
-
-Merge Reports
-
-```
-junitparser merge --glob "reports/junit-*" "reports/junit-report.xml"
-```
-
-Upload Results
-
-```
-trcli -y -c "trcli-config.yml" parse_junit -f "./reports/junit-report.xml"
 ```

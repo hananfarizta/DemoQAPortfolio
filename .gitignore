@@ -5,3 +5,4 @@ TestReport/
 mochawesome-report/
 reports/
 .vscode/
+trcli-config.yml
